@@ -1,9 +1,16 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import AppNative from "./AppNative";
 function App() {
   return (
     <div className="App">
-      <h1>Mini's</h1>
-      <a href="minis://abc?ab=100">Open</a>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/app/:plattform/:code" element={<AppNative />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
