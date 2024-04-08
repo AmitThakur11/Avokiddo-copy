@@ -8,7 +8,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<AppNative />} />
-          <Route path="/app/:plattform/:code" element={<AppNative />} />
+          <Route path="/app/:code" element={<AppNative />} />
           <Route path="*" element={<AppNative />} />
         </Routes>
       </Router>
