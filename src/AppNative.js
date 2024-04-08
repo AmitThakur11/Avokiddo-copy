@@ -17,7 +17,7 @@ export default function AppNative() {
     if (isIPhone) {
       setPlattform("ios");
     }
-  }, []);
+  }, [ua]);
 
   useEffect(() => {
     checkMobilePlattform();
