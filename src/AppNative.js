@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 export default function AppNative() {
@@ -6,7 +6,7 @@ export default function AppNative() {
   const ua = navigator.userAgent.toLowerCase();
   const [plattform, setPlattform] = useState(null);
 
-  let checkMobilePlattform = () => {
+  let checkMobilePlattform = useCallback(() => {
     const isAndroid = ua.includes("android");
     if (isAndroid) {
       setPlattform("android");
@@ -17,11 +17,11 @@ export default function AppNative() {
     if (isIPhone) {
       setPlattform("ios");
     }
-  };
+  }, []);
 
   useEffect(() => {
     checkMobilePlattform();
-  }, []);
+  }, [checkMobilePlattform]);
   return (
     <div>
       <h1>Mini's</h1>
