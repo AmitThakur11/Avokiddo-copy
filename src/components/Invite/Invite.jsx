@@ -20,7 +20,7 @@ const Invite = () => {
   return (
     <div className={style.invite}>
       <picture>
-        <img src={TopElement} alt="Element Image" />
+        <img src={TopElement} />
       </picture>
       <article>
         <h1>{`You're invited to view ${inviteData?.name}'s timeline!`}</h1>
