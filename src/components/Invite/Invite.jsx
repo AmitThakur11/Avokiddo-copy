@@ -25,20 +25,20 @@ const Invite = () => {
       <article>
         <h1>{`You're invited to view ${inviteData?.name}'s timeline!`}</h1>
         <p>
-          {`${inviteData?.parentName} wants you to ${inviteData.role.toLowerCase() == 'editor' ? 'edit' :'view' } ${inviteData?.name}'s timeline. Download the Minis app and accept this invitation so that you never miss a moment.`}
+          {`${inviteData?.parentName} wants you to ${inviteData.role.toLowerCase() === 'editor' ? 'edit' :'view' } ${inviteData?.name}'s timeline. Download the Minis app and accept this invitation so that you never miss a moment.`}
         </p>
 
         <div className={style.invite__link}>
           <a href="market://details?id=com.android.vending">
-            <img src={AppStore} alt="App Store" />
+            <img src={AppStore}  />
           </a>
           <a href="itms-apps://play.google.com/store/apps">
-            <img src={PlayStore} alt="Play Store" />
+            <img src={PlayStore}  />
           </a>
         </div>
       </article>
       <picture>
-        <img src={BottomElement} alt="Element Image" />
+        <img src={BottomElement}  />
       </picture>
     </div>
   );
