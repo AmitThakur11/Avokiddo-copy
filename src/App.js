@@ -1,15 +1,15 @@
-import "./App.css";
+import "./App.scss";
+import Invite from "./components/Invite/Invite";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AppNative from "./AppNative";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<AppNative />} />
-          <Route path="/app/:code" element={<AppNative />} />
-          <Route path="*" element={<AppNative />} />
+          <Route path="/" element={<Invite />} />
+          <Route path="/app/:code" element={<Invite />} />
+          <Route path="*" element={<Invite />} />
         </Routes>
       </Router>
     </div>
