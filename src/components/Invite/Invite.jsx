@@ -20,7 +20,7 @@ const Invite = () => {
   return (
     <div className={style.invite}>
       <picture>
-        <img src={TopElement} />
+        <img src={TopElement} alt="top" />
       </picture>
       <article>
         <h1>{`You're invited to view ${inviteData?.name}'s timeline!`}</h1>
@@ -30,15 +30,15 @@ const Invite = () => {
 
         <div className={style.invite__link}>
           <a href="market://details?id=com.android.vending">
-            <img src={AppStore}  />
+            <img src={AppStore}  alt="google"  />
           </a>
           <a href="itms-apps://play.google.com/store/apps">
-            <img src={PlayStore}  />
+            <img src={PlayStore}  alt="apple"  />
           </a>
         </div>
       </article>
       <picture>
-        <img src={BottomElement}  />
+        <img src={BottomElement}   alt="bottom" />
       </picture>
     </div>
   );
